@@ -1,52 +1,92 @@
+@keyframes rainbow {
+    0% { background-color: #ffcccb; } /* Red */
+    14% { background-color: #ffccff; } /* Orange */
+    28% { background-color: #ffffcc; } /* Yellow */
+    42% { background-color: #ccffcc; } /* Green */
+    56% { background-color: #cce6ff; } /* Blue */
+    70% { background-color: #ccccff; } /* Indigo */
+    84% { background-color: #ffb3b3; } /* Violet */
+    100% { background-color: #ffcccb; } /* Back to Red */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: rainbow 30s infinite alternate; /* Apply rainbow animation */
     margin: 0;
     padding: 0;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); /* Apply blur effect to background */
 }
 
 .container {
     width: 50%;
     margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 30px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 label {
     display: block;
     font-weight: bold;
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    border-radius: 5px;
+    width: calc(100% - 24px);
+    padding: 12px;
+    border-radius: 6px;
     border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
 }
 
 button[type="submit"] {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 14px 28px;
+    border-radius: 6px;
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+
