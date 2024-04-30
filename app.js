@@ -17,5 +17,12 @@ document
       city: city,
     };
 
+    // Log the object to console
     console.log(userObject);
+
+    // Clear form fields
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("city").value = "";
   });
