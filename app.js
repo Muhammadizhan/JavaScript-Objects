@@ -1,7 +1,7 @@
 document
   .getElementById("userForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+    event.preventDefault();
 
     // Get form values
     var name = document.getElementById("name").value;
@@ -17,7 +17,6 @@ document
       city: city,
     };
 
-    // Log the object to console
     console.log(userObject);
 
     // Clear form fields
