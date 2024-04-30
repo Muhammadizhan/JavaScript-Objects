@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    animation: rainbow 30s infinite alternate; /* Apply rainbow animation */
+    animation: rainbow 5s infinite alternate; /* Apply rainbow animation */
     margin: 0;
     padding: 0;
 }
